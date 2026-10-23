@@ -1,0 +1,23 @@
+name: 功能建议
+description: 描述使用场景和希望改进的行为
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 使用场景与问题
+      description: 当前流程中哪一步不方便？请使用虚构示例。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 希望的行为
+      description: 描述输入、输出，以及如何判断功能完成。
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 范围与替代方案
+      description: 是否涉及新增模型调用、业务规则、数据来源或部署方式？

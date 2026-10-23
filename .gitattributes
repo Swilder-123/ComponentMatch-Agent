@@ -1,0 +1,23 @@
+# Normalize text in Git; keep PowerShell files native to Windows on checkout.
+* text=auto
+*.py text eol=lf
+*.toml text eol=lf
+*.lock text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.mmd text eol=lf
+*.svg text eol=lf
+*.ps1 text eol=crlf
+.env.example text eol=lf
+.python-version text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.editorconfig text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1020" viewBox="0 0 1240 1020" role="img" aria-labelledby="title desc">
+  <title id="title">ComponentMatch Agent 架构与协作</title>
+  <desc id="desc">Streamlit 通过 FastAPI 调用 LangGraph 单 Agent 工作流，分别使用模型适配、匹配服务和请求内状态。模型适配调用 DeepSeek；匹配服务通过 Repository 读取 SQLite，并通过确定性规则引擎生成不同供应商 Top 3。</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="1.5" dy="2.5" stdDeviation="2" flood-color="#182230" flood-opacity="0.17"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#414141"/>
+    </marker>
+    <style>
+      text { font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; fill: #172b40; }
+      .box { fill: #eeebff; stroke: #9775ff; stroke-width: 1.2; filter: url(#shadow); }
+      .label { font-size: 18px; text-anchor: middle; }
+      .small { font-size: 16px; }
+      .edge { fill: none; stroke: #414141; stroke-width: 1.25; marker-end: url(#arrow); }
+      .note { font-size: 16px; fill: #647184; }
+    </style>
+  </defs>
+  <rect width="1240" height="1020" fill="white"/>
+  <text x="64" y="62" font-size="30" font-weight="700">架构与协作</text>
+  <text x="64" y="96" class="note">ComponentMatch Agent · 电子元器件供应商智能匹配</text>
+  <path d="M64 116 H1176" stroke="#dce1e8"/>
+
+  <!-- 主入口与编排 -->
+  <rect class="box" x="505" y="150" width="230" height="72"/>
+  <text class="label" x="620" y="180"><tspan x="620">Streamlit 中文工作台</tspan><tspan x="620" dy="27">需求输入与推荐展示</tspan></text>
+  <path class="edge" d="M620 222 V264"/>
+  <rect class="box" x="505" y="268" width="230" height="72"/>
+  <text class="label" x="620" y="298"><tspan x="620">FastAPI / HTTP</tspan><tspan x="620" dy="27">请求校验与接口响应</tspan></text>
+  <path class="edge" d="M620 340 V382"/>
+  <rect class="box" x="505" y="386" width="230" height="72"/>
+  <text class="label" x="620" y="416"><tspan x="620">LangGraph 单 Agent</tspan><tspan x="620" dy="27">节点编排与条件分支</tspan></text>
+
+  <!-- 三条职责分支 -->
+  <path class="edge" d="M555 458 V477 Q555 490 542 490 H223 Q210 490 210 503 V532"/>
+  <path class="edge" d="M620 458 V532"/>
+  <path class="edge" d="M685 458 V477 Q685 490 698 490 H1017 Q1030 490 1030 503 V532"/>
+  <rect class="box" x="95" y="536" width="230" height="72"/>
+  <text class="label" x="210" y="566"><tspan x="210">LLM 模型适配层</tspan><tspan x="210" dy="27">需求提取与证据解释</tspan></text>
+  <rect class="box" x="505" y="536" width="230" height="72"/>
+  <text class="label" x="620" y="566"><tspan x="620">MatchingService</tspan><tspan x="620" dy="27">统一匹配业务服务</tspan></text>
+  <rect class="box" x="915" y="536" width="230" height="72"/>
+  <text class="label" x="1030" y="566"><tspan x="1030">MatchState 请求状态</tspan><tspan x="1030" dy="27">草稿、快照与结果</tspan></text>
+
+  <!-- 模型、检索、规则和观测 -->
+  <path class="edge" d="M210 608 V682"/>
+  <path class="edge" d="M580 608 V631 Q580 644 567 644 H503 Q490 644 490 657 V682"/>
+  <path class="edge" d="M660 608 V631 Q660 644 673 644 H737 Q750 644 750 657 V682"/>
+  <path class="edge" d="M1030 608 V682"/>
+  <rect class="box" x="95" y="686" width="230" height="72"/>
+  <text class="label" x="210" y="716"><tspan x="210">DeepSeek API</tspan><tspan x="210" dy="27">结构化提取 / 解释计划</tspan></text>
+  <rect class="box" x="385" y="686" width="210" height="72"/>
+  <text class="label" x="490" y="716"><tspan x="490">SQLAlchemy</tspan><tspan x="490" dy="27">Repository 精确检索</tspan></text>
+  <rect class="box" x="645" y="686" width="210" height="72"/>
+  <text class="label" x="750" y="716"><tspan x="750">Python 规则引擎</tspan><tspan x="750" dy="27">硬约束与五维评分</tspan></text>
+  <rect class="box" x="915" y="686" width="230" height="72"/>
+  <text class="label" x="1030" y="716"><tspan x="1030">节点轨迹与调用记录</tspan><tspan x="1030" dy="27">耗时 / 来源 / 降级标识</tspan></text>
+
+  <path class="edge" d="M490 758 V814"/>
+  <path class="edge" d="M750 758 V814"/>
+  <rect class="box" x="385" y="818" width="210" height="88"/>
+  <text class="label" x="490" y="844"><tspan x="490">SQLite · 六张表</tspan><tspan class="small" x="490" dy="25">目录 / 供应商 / 报价</tspan><tspan class="small" x="490" dy="24">证书 / 绩效 / 元信息</tspan></text>
+  <rect class="box" x="645" y="818" width="210" height="88"/>
+  <text class="label" x="750" y="844"><tspan x="750">不同供应商 Top 3</tspan><tspan class="small" x="750" dy="25">去重 / 稳定排序</tspan><tspan class="small" x="750" dy="24">评分 / 证据 / 风险</tspan></text>
+
+  <text x="210" y="800" text-anchor="middle" class="note">解释校验失败时回退模板</text>
+  <text x="1030" y="800" text-anchor="middle" class="note">状态仅保留在单次请求内</text>
+  <path d="M64 945 H1176" stroke="#dce1e8"/>
+  <text x="64" y="974" class="note">箭头表示主要调用或职责关系，结果沿调用链返回。模型负责理解与解释，Python 决定筛选与排名。</text>
+  <text x="64" y="1000" class="note">当前前端仅调用自然语言接口；结构化 API 直接复用 MatchingService。业务数据全部为 DEMO。</text>
+</svg>

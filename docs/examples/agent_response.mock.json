@@ -1,0 +1,1305 @@
+{
+  "request_id": "d67a1113-bd99-4d85-b61b-7d5de40105df",
+  "input_mode": "natural_language",
+  "status": "success",
+  "requirement": {
+    "part_number": "LM358DR",
+    "manufacturer": "TI",
+    "quantity": 1000,
+    "delivery_mode": "within_days",
+    "max_delivery_days": 7,
+    "max_unit_price_cents": 120,
+    "total_budget_cents": 120000,
+    "currency": "CNY",
+    "required_certifications": [
+      "ISO9001"
+    ],
+    "preference_profile": "quality"
+  },
+  "draft": {
+    "manufacturer": "TI",
+    "part_number": "LM358DR",
+    "quantity": 1000,
+    "delivery_mode": "within_days",
+    "max_delivery_days": 7,
+    "max_unit_price": {
+      "amount": "1.2",
+      "unit": "CNY_yuan",
+      "quote": "单价不超过1.2元"
+    },
+    "total_budget": {
+      "amount": "1200",
+      "unit": "CNY_yuan",
+      "quote": "总预算不超过1200元"
+    },
+    "currency": null,
+    "required_certifications": [
+      "ISO9001"
+    ],
+    "preference_profile": "quality",
+    "field_evidence": {
+      "manufacturer": "TI",
+      "part_number": "LM358DR",
+      "quantity": "1000片",
+      "delivery_mode": "7天内到货",
+      "max_delivery_days": "7天内到货",
+      "max_unit_price_cents": "单价不超过1.2元",
+      "total_budget_cents": "总预算不超过1200元",
+      "required_certifications": "ISO9001",
+      "preference_profile": "质量优先"
+    },
+    "ambiguous_constraints": [],
+    "unhandled_constraints": []
+  },
+  "extraction_evidence": [
+    {
+      "field": "part_number",
+      "source": "text",
+      "quote": "LM358DR"
+    },
+    {
+      "field": "manufacturer",
+      "source": "text",
+      "quote": "TI"
+    },
+    {
+      "field": "quantity",
+      "source": "text",
+      "quote": "1000片"
+    },
+    {
+      "field": "delivery_mode",
+      "source": "text",
+      "quote": "7天内到货"
+    },
+    {
+      "field": "max_delivery_days",
+      "source": "text",
+      "quote": "7天内到货"
+    },
+    {
+      "field": "max_unit_price_cents",
+      "source": "text",
+      "quote": "单价不超过1.2元"
+    },
+    {
+      "field": "total_budget_cents",
+      "source": "text",
+      "quote": "总预算不超过1200元"
+    },
+    {
+      "field": "required_certifications",
+      "source": "text",
+      "quote": "ISO9001"
+    },
+    {
+      "field": "preference_profile",
+      "source": "text",
+      "quote": "质量优先"
+    }
+  ],
+  "applied_defaults": [
+    "currency=CNY"
+  ],
+  "clarification_questions": [],
+  "unsupported_constraints": [],
+  "recommendations": [
+    {
+      "rank": 1,
+      "supplier_id": 2,
+      "supplier_name": "DEMO 模拟供应商 02",
+      "offer_id": 2,
+      "component_id": 1,
+      "manufacturer": "Texas Instruments",
+      "part_number": "LM358DR",
+      "quantity": 1000,
+      "available_quantity": 5000,
+      "unit_price_cents": 120,
+      "goods_total_cents": 120000,
+      "currency": "CNY",
+      "lead_time_days": 3,
+      "total_score": "84.500000",
+      "dimensions": [
+        {
+          "metric": "price",
+          "raw_value": "120",
+          "raw_unit": "CNY cents/pcs",
+          "score": "30.000000",
+          "weight": "0.2",
+          "contribution": "6.000000",
+          "evidence_ids": [
+            "offers:2",
+            "components:1"
+          ]
+        },
+        {
+          "metric": "delivery",
+          "raw_value": "3",
+          "raw_unit": "calendar days",
+          "score": "90.000000",
+          "weight": "0.15",
+          "contribution": "13.500000",
+          "evidence_ids": [
+            "offers:2"
+          ]
+        },
+        {
+          "metric": "quality",
+          "raw_value": "1",
+          "raw_unit": "ratio",
+          "score": "100.000000",
+          "weight": "0.4",
+          "contribution": "40.000000",
+          "evidence_ids": [
+            "performance_records:7",
+            "performance_records:8",
+            "performance_records:9",
+            "performance_records:10",
+            "performance_records:11",
+            "performance_records:12"
+          ]
+        },
+        {
+          "metric": "on_time",
+          "raw_value": "1",
+          "raw_unit": "ratio",
+          "score": "100.000000",
+          "weight": "0.2",
+          "contribution": "20.000000",
+          "evidence_ids": [
+            "performance_records:7",
+            "performance_records:8",
+            "performance_records:9",
+            "performance_records:10",
+            "performance_records:11",
+            "performance_records:12"
+          ]
+        },
+        {
+          "metric": "response",
+          "raw_value": "1",
+          "raw_unit": "hours",
+          "score": "100.000000",
+          "weight": "0.05",
+          "contribution": "5.000000",
+          "evidence_ids": [
+            "performance_records:7",
+            "performance_records:8",
+            "performance_records:9",
+            "performance_records:10",
+            "performance_records:11",
+            "performance_records:12"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "offers:2",
+          "table": "offers",
+          "record_id": 2,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-20T04:00:00Z",
+          "fields": {
+            "supplier_id": 2,
+            "component_id": 1,
+            "unit_price_cents": 120,
+            "currency": "CNY",
+            "available_quantity": 5000,
+            "min_order_quantity": 100,
+            "order_multiple": 100,
+            "lead_time_days": 3,
+            "observed_at": "2026-10-20T04:00:00+00:00",
+            "valid_until": "2026-10-28T04:00:00+00:00",
+            "status": "active"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "components:1",
+          "table": "components",
+          "record_id": 1,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-20T04:00:00Z",
+          "fields": {
+            "manufacturer": "Texas Instruments",
+            "manufacturer_key": "TEXAS INSTRUMENTS",
+            "part_number": "LM358DR",
+            "part_number_key": "LM358DR",
+            "reference_unit_price_cents": 100,
+            "reference_currency": "CNY",
+            "reference_observed_at": "2026-10-20T04:00:00+00:00"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "suppliers:2",
+          "table": "suppliers",
+          "record_id": 2,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "name": "DEMO 模拟供应商 02",
+            "status": "active"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "supplier_certifications:2",
+          "table": "supplier_certifications",
+          "record_id": 2,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-01T04:00:00Z",
+          "fields": {
+            "supplier_id": 2,
+            "certification_code": "ISO9001",
+            "valid_from": "2025-10-21",
+            "expires_on": "2027-10-21",
+            "verification_status": "verified",
+            "verified_at": "2026-10-01T04:00:00+00:00"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:7",
+          "table": "performance_records",
+          "record_id": 7,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 2,
+            "component_id": 1,
+            "period_start": "2026-04-01",
+            "period_end": "2026-05-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 1000,
+            "orders_due": 100,
+            "orders_on_time": 100,
+            "response_minutes_total": 600,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:8",
+          "table": "performance_records",
+          "record_id": 8,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 2,
+            "component_id": 1,
+            "period_start": "2026-05-01",
+            "period_end": "2026-06-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 1000,
+            "orders_due": 100,
+            "orders_on_time": 100,
+            "response_minutes_total": 600,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:9",
+          "table": "performance_records",
+          "record_id": 9,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 2,
+            "component_id": 1,
+            "period_start": "2026-06-01",
+            "period_end": "2026-07-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 1000,
+            "orders_due": 100,
+            "orders_on_time": 100,
+            "response_minutes_total": 600,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:10",
+          "table": "performance_records",
+          "record_id": 10,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 2,
+            "component_id": 1,
+            "period_start": "2026-07-01",
+            "period_end": "2026-08-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 1000,
+            "orders_due": 100,
+            "orders_on_time": 100,
+            "response_minutes_total": 600,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:11",
+          "table": "performance_records",
+          "record_id": 11,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 2,
+            "component_id": 1,
+            "period_start": "2026-08-01",
+            "period_end": "2026-09-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 1000,
+            "orders_due": 100,
+            "orders_on_time": 100,
+            "response_minutes_total": 600,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:12",
+          "table": "performance_records",
+          "record_id": 12,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 2,
+            "component_id": 1,
+            "period_start": "2026-09-01",
+            "period_end": "2026-10-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 1000,
+            "orders_due": 100,
+            "orders_on_time": 100,
+            "response_minutes_total": 600,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        }
+      ],
+      "risks": [
+        {
+          "code": "MOCK_DATA_ONLY",
+          "message": "DEMO：所有报价、库存、资质和历史表现均为虚构",
+          "evidence_ids": []
+        }
+      ],
+      "data_label": "DEMO"
+    },
+    {
+      "rank": 2,
+      "supplier_id": 3,
+      "supplier_name": "DEMO 模拟供应商 03",
+      "offer_id": 3,
+      "component_id": 1,
+      "manufacturer": "Texas Instruments",
+      "part_number": "LM358DR",
+      "quantity": 1000,
+      "available_quantity": 5000,
+      "unit_price_cents": 100,
+      "goods_total_cents": 100000,
+      "currency": "CNY",
+      "lead_time_days": 2,
+      "total_score": "78.893617",
+      "dimensions": [
+        {
+          "metric": "price",
+          "raw_value": "100",
+          "raw_unit": "CNY cents/pcs",
+          "score": "50.000000",
+          "weight": "0.2",
+          "contribution": "10.000000",
+          "evidence_ids": [
+            "offers:3",
+            "components:1"
+          ]
+        },
+        {
+          "metric": "delivery",
+          "raw_value": "2",
+          "raw_unit": "calendar days",
+          "score": "93.333333",
+          "weight": "0.15",
+          "contribution": "14.000000",
+          "evidence_ids": [
+            "offers:3"
+          ]
+        },
+        {
+          "metric": "quality",
+          "raw_value": "0.99",
+          "raw_unit": "ratio",
+          "score": "80.000000",
+          "weight": "0.4",
+          "contribution": "32.000000",
+          "evidence_ids": [
+            "performance_records:13",
+            "performance_records:14",
+            "performance_records:15",
+            "performance_records:16",
+            "performance_records:17",
+            "performance_records:18"
+          ]
+        },
+        {
+          "metric": "on_time",
+          "raw_value": "0.98",
+          "raw_unit": "ratio",
+          "score": "90.000000",
+          "weight": "0.2",
+          "contribution": "18.000000",
+          "evidence_ids": [
+            "performance_records:13",
+            "performance_records:14",
+            "performance_records:15",
+            "performance_records:16",
+            "performance_records:17",
+            "performance_records:18"
+          ]
+        },
+        {
+          "metric": "response",
+          "raw_value": "2",
+          "raw_unit": "hours",
+          "score": "97.872340",
+          "weight": "0.05",
+          "contribution": "4.893617",
+          "evidence_ids": [
+            "performance_records:13",
+            "performance_records:14",
+            "performance_records:15",
+            "performance_records:16",
+            "performance_records:17",
+            "performance_records:18"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "offers:3",
+          "table": "offers",
+          "record_id": 3,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-20T04:00:00Z",
+          "fields": {
+            "supplier_id": 3,
+            "component_id": 1,
+            "unit_price_cents": 100,
+            "currency": "CNY",
+            "available_quantity": 5000,
+            "min_order_quantity": 100,
+            "order_multiple": 100,
+            "lead_time_days": 2,
+            "observed_at": "2026-10-20T04:00:00+00:00",
+            "valid_until": "2026-10-28T04:00:00+00:00",
+            "status": "active"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "components:1",
+          "table": "components",
+          "record_id": 1,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-20T04:00:00Z",
+          "fields": {
+            "manufacturer": "Texas Instruments",
+            "manufacturer_key": "TEXAS INSTRUMENTS",
+            "part_number": "LM358DR",
+            "part_number_key": "LM358DR",
+            "reference_unit_price_cents": 100,
+            "reference_currency": "CNY",
+            "reference_observed_at": "2026-10-20T04:00:00+00:00"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "suppliers:3",
+          "table": "suppliers",
+          "record_id": 3,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "name": "DEMO 模拟供应商 03",
+            "status": "active"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "supplier_certifications:3",
+          "table": "supplier_certifications",
+          "record_id": 3,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-01T04:00:00Z",
+          "fields": {
+            "supplier_id": 3,
+            "certification_code": "ISO9001",
+            "valid_from": "2025-10-21",
+            "expires_on": "2027-10-21",
+            "verification_status": "verified",
+            "verified_at": "2026-10-01T04:00:00+00:00"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:13",
+          "table": "performance_records",
+          "record_id": 13,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 3,
+            "component_id": 1,
+            "period_start": "2026-04-01",
+            "period_end": "2026-05-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 990,
+            "orders_due": 100,
+            "orders_on_time": 98,
+            "response_minutes_total": 1200,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:14",
+          "table": "performance_records",
+          "record_id": 14,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 3,
+            "component_id": 1,
+            "period_start": "2026-05-01",
+            "period_end": "2026-06-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 990,
+            "orders_due": 100,
+            "orders_on_time": 98,
+            "response_minutes_total": 1200,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:15",
+          "table": "performance_records",
+          "record_id": 15,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 3,
+            "component_id": 1,
+            "period_start": "2026-06-01",
+            "period_end": "2026-07-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 990,
+            "orders_due": 100,
+            "orders_on_time": 98,
+            "response_minutes_total": 1200,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:16",
+          "table": "performance_records",
+          "record_id": 16,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 3,
+            "component_id": 1,
+            "period_start": "2026-07-01",
+            "period_end": "2026-08-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 990,
+            "orders_due": 100,
+            "orders_on_time": 98,
+            "response_minutes_total": 1200,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:17",
+          "table": "performance_records",
+          "record_id": 17,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 3,
+            "component_id": 1,
+            "period_start": "2026-08-01",
+            "period_end": "2026-09-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 990,
+            "orders_due": 100,
+            "orders_on_time": 98,
+            "response_minutes_total": 1200,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:18",
+          "table": "performance_records",
+          "record_id": 18,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 3,
+            "component_id": 1,
+            "period_start": "2026-09-01",
+            "period_end": "2026-10-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 990,
+            "orders_due": 100,
+            "orders_on_time": 98,
+            "response_minutes_total": 1200,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        }
+      ],
+      "risks": [
+        {
+          "code": "MOCK_DATA_ONLY",
+          "message": "DEMO：所有报价、库存、资质和历史表现均为虚构",
+          "evidence_ids": []
+        }
+      ],
+      "data_label": "DEMO"
+    },
+    {
+      "rank": 3,
+      "supplier_id": 1,
+      "supplier_name": "DEMO 模拟供应商 01",
+      "offer_id": 1,
+      "component_id": 1,
+      "manufacturer": "Texas Instruments",
+      "part_number": "LM358DR",
+      "quantity": 1000,
+      "available_quantity": 5000,
+      "unit_price_cents": 50,
+      "goods_total_cents": 50000,
+      "currency": "CNY",
+      "lead_time_days": 6,
+      "total_score": "54.680851",
+      "dimensions": [
+        {
+          "metric": "price",
+          "raw_value": "50",
+          "raw_unit": "CNY cents/pcs",
+          "score": "100.000000",
+          "weight": "0.2",
+          "contribution": "20.000000",
+          "evidence_ids": [
+            "offers:1",
+            "components:1"
+          ]
+        },
+        {
+          "metric": "delivery",
+          "raw_value": "6",
+          "raw_unit": "calendar days",
+          "score": "80.000000",
+          "weight": "0.15",
+          "contribution": "12.000000",
+          "evidence_ids": [
+            "offers:1"
+          ]
+        },
+        {
+          "metric": "quality",
+          "raw_value": "0.96",
+          "raw_unit": "ratio",
+          "score": "20.000000",
+          "weight": "0.4",
+          "contribution": "8.000000",
+          "evidence_ids": [
+            "performance_records:1",
+            "performance_records:2",
+            "performance_records:3",
+            "performance_records:4",
+            "performance_records:5",
+            "performance_records:6"
+          ]
+        },
+        {
+          "metric": "on_time",
+          "raw_value": "0.9",
+          "raw_unit": "ratio",
+          "score": "50.000000",
+          "weight": "0.2",
+          "contribution": "10.000000",
+          "evidence_ids": [
+            "performance_records:1",
+            "performance_records:2",
+            "performance_records:3",
+            "performance_records:4",
+            "performance_records:5",
+            "performance_records:6"
+          ]
+        },
+        {
+          "metric": "response",
+          "raw_value": "4",
+          "raw_unit": "hours",
+          "score": "93.617021",
+          "weight": "0.05",
+          "contribution": "4.680851",
+          "evidence_ids": [
+            "performance_records:1",
+            "performance_records:2",
+            "performance_records:3",
+            "performance_records:4",
+            "performance_records:5",
+            "performance_records:6"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "offers:1",
+          "table": "offers",
+          "record_id": 1,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-20T04:00:00Z",
+          "fields": {
+            "supplier_id": 1,
+            "component_id": 1,
+            "unit_price_cents": 50,
+            "currency": "CNY",
+            "available_quantity": 5000,
+            "min_order_quantity": 100,
+            "order_multiple": 100,
+            "lead_time_days": 6,
+            "observed_at": "2026-10-20T04:00:00+00:00",
+            "valid_until": "2026-10-28T04:00:00+00:00",
+            "status": "active"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "components:1",
+          "table": "components",
+          "record_id": 1,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-20T04:00:00Z",
+          "fields": {
+            "manufacturer": "Texas Instruments",
+            "manufacturer_key": "TEXAS INSTRUMENTS",
+            "part_number": "LM358DR",
+            "part_number_key": "LM358DR",
+            "reference_unit_price_cents": 100,
+            "reference_currency": "CNY",
+            "reference_observed_at": "2026-10-20T04:00:00+00:00"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "suppliers:1",
+          "table": "suppliers",
+          "record_id": 1,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "name": "DEMO 模拟供应商 01",
+            "status": "active"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "supplier_certifications:1",
+          "table": "supplier_certifications",
+          "record_id": 1,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-01T04:00:00Z",
+          "fields": {
+            "supplier_id": 1,
+            "certification_code": "ISO9001",
+            "valid_from": "2025-10-21",
+            "expires_on": "2027-10-21",
+            "verification_status": "verified",
+            "verified_at": "2026-10-01T04:00:00+00:00"
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:1",
+          "table": "performance_records",
+          "record_id": 1,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 1,
+            "component_id": 1,
+            "period_start": "2026-04-01",
+            "period_end": "2026-05-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 960,
+            "orders_due": 100,
+            "orders_on_time": 90,
+            "response_minutes_total": 2400,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:2",
+          "table": "performance_records",
+          "record_id": 2,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 1,
+            "component_id": 1,
+            "period_start": "2026-05-01",
+            "period_end": "2026-06-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 960,
+            "orders_due": 100,
+            "orders_on_time": 90,
+            "response_minutes_total": 2400,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:3",
+          "table": "performance_records",
+          "record_id": 3,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 1,
+            "component_id": 1,
+            "period_start": "2026-06-01",
+            "period_end": "2026-07-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 960,
+            "orders_due": 100,
+            "orders_on_time": 90,
+            "response_minutes_total": 2400,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:4",
+          "table": "performance_records",
+          "record_id": 4,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 1,
+            "component_id": 1,
+            "period_start": "2026-07-01",
+            "period_end": "2026-08-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 960,
+            "orders_due": 100,
+            "orders_on_time": 90,
+            "response_minutes_total": 2400,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:5",
+          "table": "performance_records",
+          "record_id": 5,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 1,
+            "component_id": 1,
+            "period_start": "2026-08-01",
+            "period_end": "2026-09-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 960,
+            "orders_due": 100,
+            "orders_on_time": 90,
+            "response_minutes_total": 2400,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        },
+        {
+          "evidence_id": "performance_records:6",
+          "table": "performance_records",
+          "record_id": 6,
+          "source_label": "DEMO:DEMO-v2",
+          "observed_at": "2026-10-21T04:00:00Z",
+          "fields": {
+            "supplier_id": 1,
+            "component_id": 1,
+            "period_start": "2026-09-01",
+            "period_end": "2026-10-01",
+            "quality_evaluated_orders": 10,
+            "inspected_units": 1000,
+            "accepted_units": 960,
+            "orders_due": 100,
+            "orders_on_time": 90,
+            "response_minutes_total": 2400,
+            "response_samples": 10
+          },
+          "data_label": "DEMO"
+        }
+      ],
+      "risks": [
+        {
+          "code": "MOCK_DATA_ONLY",
+          "message": "DEMO：所有报价、库存、资质和历史表现均为虚构",
+          "evidence_ids": []
+        }
+      ],
+      "data_label": "DEMO"
+    }
+  ],
+  "rejected_offers": [
+    {
+      "supplier_id": 4,
+      "supplier_name": "DEMO 模拟供应商 04",
+      "offer_id": 4,
+      "reasons": [
+        {
+          "code": "INSUFFICIENT_STOCK",
+          "message": "单条报价库存不足，不合并或拆单",
+          "field": "available_quantity",
+          "actual": 900,
+          "expected": 1000
+        }
+      ]
+    },
+    {
+      "supplier_id": 5,
+      "supplier_name": "DEMO 模拟供应商 05",
+      "offer_id": 5,
+      "reasons": [
+        {
+          "code": "MOQ_NOT_MET",
+          "message": "需求数量低于起订量",
+          "field": "min_order_quantity",
+          "actual": 2000,
+          "expected": 1000
+        }
+      ]
+    },
+    {
+      "supplier_id": 6,
+      "supplier_name": "DEMO 模拟供应商 06",
+      "offer_id": 6,
+      "reasons": [
+        {
+          "code": "ORDER_MULTIPLE_MISMATCH",
+          "message": "需求数量不是包装下单倍数",
+          "field": "order_multiple",
+          "actual": 300,
+          "expected": 1000
+        }
+      ]
+    },
+    {
+      "supplier_id": 7,
+      "supplier_name": "DEMO 模拟供应商 07",
+      "offer_id": 7,
+      "reasons": [
+        {
+          "code": "CERT_UNVERIFIED",
+          "message": "证书已撤销或尚未核验",
+          "field": "certification:7",
+          "actual": "unverified",
+          "expected": "verified"
+        },
+        {
+          "code": "CERT_VERIFICATION_MISSING",
+          "message": "证书缺少核验时间",
+          "field": "certification:7",
+          "actual": null,
+          "expected": null
+        }
+      ]
+    },
+    {
+      "supplier_id": 8,
+      "supplier_name": "DEMO 模拟供应商 08",
+      "offer_id": 8,
+      "reasons": [
+        {
+          "code": "CERT_EXPIRED",
+          "message": "证书已到期",
+          "field": "certification:8",
+          "actual": "2026-10-20",
+          "expected": null
+        }
+      ]
+    },
+    {
+      "supplier_id": 9,
+      "supplier_name": "DEMO 模拟供应商 09",
+      "offer_id": 9,
+      "reasons": [
+        {
+          "code": "CERT_MISSING",
+          "message": "所需证书缺失",
+          "field": "ISO9001",
+          "actual": null,
+          "expected": "valid verified certificate"
+        }
+      ]
+    },
+    {
+      "supplier_id": 10,
+      "supplier_name": "DEMO 模拟供应商 10",
+      "offer_id": 10,
+      "reasons": [
+        {
+          "code": "OFFER_STALE",
+          "message": "供货快照超过7日时效",
+          "field": "observed_at",
+          "actual": "2026-10-11T04:00:00+00:00",
+          "expected": null
+        }
+      ]
+    },
+    {
+      "supplier_id": 11,
+      "supplier_name": "DEMO 模拟供应商 11",
+      "offer_id": 11,
+      "reasons": [
+        {
+          "code": "OFFER_EXPIRED",
+          "message": "报价已过有效期",
+          "field": "valid_until",
+          "actual": "2026-10-20T04:00:00+00:00",
+          "expected": null
+        }
+      ]
+    },
+    {
+      "supplier_id": 12,
+      "supplier_name": "DEMO 模拟供应商 12",
+      "offer_id": 12,
+      "reasons": [
+        {
+          "code": "SUPPLIER_INACTIVE",
+          "message": "供应商已停用",
+          "field": "supplier.status",
+          "actual": "suspended",
+          "expected": "active"
+        }
+      ]
+    },
+    {
+      "supplier_id": 2,
+      "supplier_name": "DEMO 模拟供应商 02",
+      "offer_id": 13,
+      "reasons": [
+        {
+          "code": "UNIT_PRICE_OVER_LIMIT",
+          "message": "含税单价超过上限（分/pcs，不含运费）",
+          "field": "unit_price_cents",
+          "actual": 125,
+          "expected": 120
+        },
+        {
+          "code": "TOTAL_BUDGET_EXCEEDED",
+          "message": "含税货款合计超过预算（分，不含运费）",
+          "field": "goods_total_cents",
+          "actual": 125000,
+          "expected": 120000
+        }
+      ]
+    }
+  ],
+  "exclusion_summary": {
+    "retrieved_offers": 13,
+    "eligible_offers": 3,
+    "eligible_suppliers": 3,
+    "reason_counts": {
+      "CERT_EXPIRED": 1,
+      "CERT_MISSING": 1,
+      "CERT_UNVERIFIED": 1,
+      "CERT_VERIFICATION_MISSING": 1,
+      "INSUFFICIENT_STOCK": 1,
+      "MOQ_NOT_MET": 1,
+      "OFFER_EXPIRED": 1,
+      "OFFER_STALE": 1,
+      "ORDER_MULTIPLE_MISMATCH": 1,
+      "SUPPLIER_INACTIVE": 1,
+      "TOTAL_BUDGET_EXCEEDED": 1,
+      "UNIT_PRICE_OVER_LIMIT": 1
+    },
+    "note": "按报价记录计数；一条报价可有多个排除原因，各原因之和可大于排除报价数"
+  },
+  "metadata": {
+    "data_label": "DEMO",
+    "is_mock": true,
+    "dataset_version": "DEMO-v2",
+    "schema_version": "schema-v1",
+    "dataset_snapshot_time": "2026-10-21T04:00:00Z",
+    "business_time": "2026-10-21T04:00:00Z",
+    "business_date": "2026-10-21",
+    "business_timezone": "Asia/Shanghai",
+    "executed_at": "2026-10-21T10:07:20.656274Z",
+    "clock_mode": "test",
+    "rule_version": "score-v0.2",
+    "weights": {
+      "price": "0.2",
+      "delivery": "0.15",
+      "quality": "0.4",
+      "on_time": "0.2",
+      "response": "0.05"
+    },
+    "explanation_mode": "none",
+    "model_name": null
+  },
+  "explanations": [
+    {
+      "supplier_id": 2,
+      "rank": 1,
+      "reasons": [
+        "DEMO：本次确定性评分排名第1，总分84.50。",
+        "交期分项90.00，权重15%，贡献13.50；原值3（calendar days）。",
+        "质量分项100.00，权重40%，贡献40.00；原值1（ratio）。"
+      ],
+      "risk_messages": [
+        "DEMO：所有报价、库存、资质和历史表现均为虚构"
+      ],
+      "evidence_ids": [
+        "offers:2",
+        "performance_records:7",
+        "performance_records:8",
+        "performance_records:9",
+        "performance_records:10",
+        "performance_records:11",
+        "performance_records:12"
+      ],
+      "data_label": "DEMO"
+    },
+    {
+      "supplier_id": 3,
+      "rank": 2,
+      "reasons": [
+        "DEMO：本次确定性评分排名第2，总分78.89。",
+        "价格分项50.00，权重20%，贡献10.00；原值100（CNY cents/pcs）。",
+        "交期分项93.33，权重15%，贡献14.00；原值2（calendar days）。"
+      ],
+      "risk_messages": [
+        "DEMO：所有报价、库存、资质和历史表现均为虚构"
+      ],
+      "evidence_ids": [
+        "offers:3",
+        "components:1"
+      ],
+      "data_label": "DEMO"
+    },
+    {
+      "supplier_id": 1,
+      "rank": 3,
+      "reasons": [
+        "DEMO：本次确定性评分排名第3，总分54.68。",
+        "价格分项100.00，权重20%，贡献20.00；原值50（CNY cents/pcs）。",
+        "交期分项80.00，权重15%，贡献12.00；原值6（calendar days）。"
+      ],
+      "risk_messages": [
+        "DEMO：所有报价、库存、资质和历史表现均为虚构"
+      ],
+      "evidence_ids": [
+        "offers:1",
+        "components:1"
+      ],
+      "data_label": "DEMO"
+    }
+  ],
+  "explanation_mode": "llm",
+  "explanation_fallback_reason": null,
+  "llm_calls": [
+    {
+      "phase": "parse",
+      "attempt": 1,
+      "source": "mock",
+      "model_name": "test-only-fake",
+      "outcome": "success",
+      "error_code": null,
+      "duration_ms": 0.0,
+      "input_tokens": 10,
+      "output_tokens": 5
+    },
+    {
+      "phase": "explain",
+      "attempt": 1,
+      "source": "mock",
+      "model_name": "test-only-fake",
+      "outcome": "success",
+      "error_code": null,
+      "duration_ms": 0.0,
+      "input_tokens": 10,
+      "output_tokens": 5
+    }
+  ],
+  "node_trace": [
+    {
+      "node": "parse_request",
+      "duration_ms": 0.0,
+      "status": "running"
+    },
+    {
+      "node": "validate_request",
+      "duration_ms": 0.0,
+      "status": "running"
+    },
+    {
+      "node": "retrieve_candidates",
+      "duration_ms": 0.0,
+      "status": "running"
+    },
+    {
+      "node": "filter_candidates",
+      "duration_ms": 0.0,
+      "status": "running"
+    },
+    {
+      "node": "score_and_rank",
+      "duration_ms": 0.0,
+      "status": "success"
+    },
+    {
+      "node": "explain_results",
+      "duration_ms": 0.0,
+      "status": "success"
+    },
+    {
+      "node": "finalize_response",
+      "duration_ms": 0.0,
+      "status": "success"
+    }
+  ],
+  "warnings": [
+    "DEMO：所有数据均为虚构，不代表云汉芯城或任何真实企业的库存、报价、资质和评价"
+  ],
+  "error": null,
+  "data_label": "DEMO"
+}

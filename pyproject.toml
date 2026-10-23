@@ -1,0 +1,35 @@
+[project]
+name = "componentmatch-dev"
+version = "0.1.0"
+description = "Interview prototype for explainable electronic component supplier matching"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["componentmatch-agent", "componentmatch-frontend"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8,<10",
+    "ruff>=0.11,<1",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["backend", "frontend", "packages/contracts"]
+
+[tool.uv.sources]
+componentmatch-agent = { workspace = true }
+componentmatch-frontend = { workspace = true }
+componentmatch-contracts = { workspace = true }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

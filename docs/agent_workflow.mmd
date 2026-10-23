@@ -1,0 +1,41 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	parse_request(parse_request)
+	validate_request(validate_request)
+	retrieve_candidates(retrieve_candidates)
+	filter_candidates(filter_candidates)
+	score_and_rank(score_and_rank)
+	explain_results(explain_results)
+	request_clarification(request_clarification)
+	build_no_match(build_no_match)
+	handle_error(handle_error)
+	finalize_response(finalize_response)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> parse_request;
+	build_no_match --> finalize_response;
+	explain_results --> finalize_response;
+	filter_candidates -.-> build_no_match;
+	filter_candidates -.-> handle_error;
+	filter_candidates -.-> score_and_rank;
+	handle_error --> finalize_response;
+	parse_request -.-> handle_error;
+	parse_request -.-> validate_request;
+	request_clarification --> finalize_response;
+	retrieve_candidates -.-> build_no_match;
+	retrieve_candidates -.-> filter_candidates;
+	retrieve_candidates -.-> handle_error;
+	retrieve_candidates -.-> request_clarification;
+	score_and_rank -.-> explain_results;
+	score_and_rank -.-> handle_error;
+	validate_request -.-> handle_error;
+	validate_request -.-> request_clarification;
+	validate_request -.-> retrieve_candidates;
+	finalize_response --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

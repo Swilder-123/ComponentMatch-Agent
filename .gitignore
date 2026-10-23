@@ -1,0 +1,33 @@
+# Credentials and local overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python, tooling, and local environments
+.venv/
+.venv-*/
+**/.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Local databases and generated output
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+logs/
+*.log
+.streamlit/secrets.toml
+.vscode/
+Thumbs.db
+.DS_Store

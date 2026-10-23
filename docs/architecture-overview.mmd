@@ -1,0 +1,25 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#eeebff', 'primaryBorderColor': '#9775ff', 'primaryTextColor': '#172b40', 'lineColor': '#414141', 'fontFamily': 'Microsoft YaHei, sans-serif'}, 'flowchart': {'curve': 'basis', 'nodeSpacing': 45, 'rankSpacing': 55}}}%%
+flowchart TB
+    UI["Streamlit 中文工作台<br/>需求输入与推荐展示"]
+    API["FastAPI / HTTP<br/>请求校验与接口响应"]
+    G["LangGraph 单 Agent<br/>节点编排与条件分支"]
+    LLM["LLM 模型适配层<br/>需求提取与证据解释"]
+    SERVICE["MatchingService<br/>统一匹配业务服务"]
+    STATE["MatchState 请求状态<br/>草稿、快照与结果"]
+    MODEL["DeepSeek API<br/>结构化提取 / 解释计划"]
+    REPO["SQLAlchemy<br/>Repository 精确检索"]
+    RULE["Python 规则引擎<br/>硬约束与五维评分"]
+    TRACE["节点轨迹与调用记录<br/>耗时 / 来源 / 降级标识"]
+    DB["SQLite · 六张表<br/>目录 / 供应商 / 报价<br/>证书 / 绩效 / 元信息"]
+    TOP["不同供应商 Top 3<br/>去重 / 稳定排序<br/>评分 / 证据 / 风险"]
+
+    UI --> API --> G
+    G --> LLM
+    G --> SERVICE
+    G --> STATE
+    LLM --> MODEL
+    SERVICE --> REPO
+    SERVICE --> RULE
+    STATE --> TRACE
+    REPO --> DB
+    RULE --> TOP
