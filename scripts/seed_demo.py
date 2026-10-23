@@ -4,11 +4,12 @@ import argparse
 import json
 from pathlib import Path
 
+from dotenv import dotenv_values
+from sqlalchemy.engine import make_url
+
 from componentmatch.core.config import Settings
 from componentmatch.db.seed import seed_demo
 from componentmatch.db.session import make_engine
-from dotenv import dotenv_values
-from sqlalchemy.engine import make_url
 
 
 def main():

@@ -2,9 +2,9 @@ import json
 
 import httpx
 import pytest
+
 from componentmatch_frontend.api_client import APIClient, APIError, UIConfig
 from componentmatch_frontend.presentation import PRESETS, chart_rows, money, requirement_fields
-
 from scripts.start_demo import check_database, database_freshness, frontend_environment
 from tests.phase4_fakes import response_for
 

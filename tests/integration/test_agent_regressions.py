@@ -7,6 +7,8 @@ import time
 from datetime import UTC, datetime
 
 import pytest
+from fastapi.testclient import TestClient
+
 from componentmatch.agent.graph import AgentWorkflow
 from componentmatch.api.agent_routes import get_agent_workflow
 from componentmatch.api.main import app
@@ -14,8 +16,6 @@ from componentmatch.api.routes import get_matching_service
 from componentmatch.core.config import Settings
 from componentmatch.llm.client import JSONModel, LLMFailure
 from componentmatch_contracts.agent import AgentRequest
-from fastapi.testclient import TestClient
-
 from tests.agent_fakes import DRAFT, TEXT, FakeTransport
 
 

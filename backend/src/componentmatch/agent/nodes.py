@@ -4,14 +4,6 @@ import asyncio
 import logging
 import time
 
-from componentmatch_contracts.agent import (
-    AgentMetadata,
-    AgentResult,
-    ExplanationPlan,
-    NodeTrace,
-    RequirementDraft,
-)
-from componentmatch_contracts.result import MatchError
 from pydantic import ValidationError
 from sqlalchemy.exc import SQLAlchemyError
 
@@ -26,6 +18,14 @@ from componentmatch.llm.explainer import (
     validate_plan,
 )
 from componentmatch.llm.parser import PARSE_SYSTEM, normalize_draft, validate_draft_sources
+from componentmatch_contracts.agent import (
+    AgentMetadata,
+    AgentResult,
+    ExplanationPlan,
+    NodeTrace,
+    RequirementDraft,
+)
+from componentmatch_contracts.result import MatchError
 
 logger = logging.getLogger("componentmatch.agent")
 

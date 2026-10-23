@@ -1,8 +1,9 @@
+from fastapi.testclient import TestClient
+
 from componentmatch.api.main import app
 from componentmatch.api.routes import get_matching_service
 from componentmatch.db.session import make_engine
 from componentmatch.services.matching import MatchingService
-from fastapi.testclient import TestClient
 
 
 def test_structured_endpoint_and_openapi(service, build_requirement):

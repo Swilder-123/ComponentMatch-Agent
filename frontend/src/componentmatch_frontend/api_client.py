@@ -5,8 +5,9 @@ import os
 from dataclasses import dataclass
 
 import httpx
-from componentmatch_contracts.agent import AgentRequest, AgentResult
 from pydantic import ValidationError
+
+from componentmatch_contracts.agent import AgentRequest, AgentResult
 
 
 class APIError(Exception):

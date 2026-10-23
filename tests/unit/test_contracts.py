@@ -1,9 +1,10 @@
 from decimal import Decimal
 
 import pytest
+from pydantic import ValidationError
+
 from componentmatch.scoring.weights import METRICS, PROFILES, validate_weights, weights_for
 from componentmatch_contracts.requirement import MatchRequest, ProcurementRequirement
-from pydantic import ValidationError
 
 
 @pytest.mark.parametrize(

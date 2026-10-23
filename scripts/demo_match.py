@@ -5,11 +5,12 @@ import json
 import sys
 from pathlib import Path
 
+from dotenv import dotenv_values
+
 from componentmatch.core.config import Settings
 from componentmatch.db.session import make_engine
 from componentmatch.services.matching import MatchingService
 from componentmatch_contracts.requirement import ProcurementRequirement
-from dotenv import dotenv_values
 
 
 def run_scenarios(service):

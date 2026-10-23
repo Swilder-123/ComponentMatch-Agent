@@ -5,6 +5,10 @@ import logging
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, Mock
 
+from fastapi.testclient import TestClient
+from sqlalchemy import delete, update
+from sqlalchemy.orm import Session
+
 from componentmatch.agent.graph import AgentWorkflow
 from componentmatch.api.main import app
 from componentmatch.api.routes import get_matching_service
@@ -12,10 +16,6 @@ from componentmatch.core.config import Settings
 from componentmatch.llm.client import DeepSeekTransport, JSONModel
 from componentmatch.models import Offer, PerformanceRecord
 from componentmatch_contracts.agent import AgentRequest
-from fastapi.testclient import TestClient
-from sqlalchemy import delete, update
-from sqlalchemy.orm import Session
-
 from tests.agent_fakes import TEXT, FakeTransport
 
 

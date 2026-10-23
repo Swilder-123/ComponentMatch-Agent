@@ -8,12 +8,12 @@ from typing import Literal, Protocol
 
 import httpx
 import openai
-from componentmatch_contracts.agent import LLMCallRecord
 from langchain_deepseek import ChatDeepSeek
 from langsmith import tracing_context
 from pydantic import BaseModel, ValidationError
 
 from componentmatch.core.config import Settings
+from componentmatch_contracts.agent import LLMCallRecord
 
 
 class LLMFailure(Exception):

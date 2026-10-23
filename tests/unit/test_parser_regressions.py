@@ -4,6 +4,7 @@ import copy
 from datetime import UTC, datetime
 
 import pytest
+
 from componentmatch.llm.client import LLMFailure
 from componentmatch.llm.parser import (
     money_cents,
@@ -12,7 +13,6 @@ from componentmatch.llm.parser import (
     validate_draft_sources,
 )
 from componentmatch_contracts.agent import AgentRequest, MoneyMention, RequirementDraft
-
 from tests.agent_fakes import DRAFT, TEXT
 
 

@@ -1,8 +1,8 @@
 """Chinese procurement workbench. All business results come from FastAPI."""
 
 import streamlit as st
-from componentmatch_contracts.agent import AgentRequest
 
+from componentmatch_contracts.agent import AgentRequest
 from componentmatch_frontend.api_client import APIClient, APIError, UIConfig
 from componentmatch_frontend.clarification import (
     collect_confirmations,

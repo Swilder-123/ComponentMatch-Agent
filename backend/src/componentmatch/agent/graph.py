@@ -5,13 +5,13 @@ import time
 from datetime import UTC, datetime
 from uuid import uuid4
 
-from componentmatch_contracts.agent import AgentResult
-from componentmatch_contracts.result import MatchError
 from langgraph.graph import END, START, StateGraph
 from langsmith import tracing_context
 
 from componentmatch.agent.nodes import Nodes
 from componentmatch.agent.state import MatchState
+from componentmatch_contracts.agent import AgentResult
+from componentmatch_contracts.result import MatchError
 
 logger = logging.getLogger("componentmatch.agent")
 

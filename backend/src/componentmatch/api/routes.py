@@ -3,14 +3,14 @@
 from functools import lru_cache
 from typing import Annotated
 
-from componentmatch_contracts.requirement import MatchRequest
-from componentmatch_contracts.result import MatchResult
 from fastapi import APIRouter, Depends
 from fastapi.responses import JSONResponse
 
 from componentmatch.core.config import Settings
 from componentmatch.db.session import make_engine
 from componentmatch.services.matching import MatchingService
+from componentmatch_contracts.requirement import MatchRequest
+from componentmatch_contracts.result import MatchResult
 
 router = APIRouter(prefix="/api/v1", tags=["deterministic matching"])
 

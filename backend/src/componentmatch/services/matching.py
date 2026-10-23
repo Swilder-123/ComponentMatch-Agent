@@ -6,14 +6,6 @@ from datetime import UTC, datetime
 from typing import Literal
 from uuid import uuid4
 
-from componentmatch_contracts.requirement import ProcurementRequirement
-from componentmatch_contracts.result import (
-    ExclusionSummary,
-    MatchError,
-    MatchMetadata,
-    MatchResult,
-    RejectedOffer,
-)
 from pydantic import ValidationError
 from sqlalchemy.engine import Engine
 from sqlalchemy.exc import SQLAlchemyError
@@ -25,6 +17,14 @@ from componentmatch.schemas.snapshot import Candidate
 from componentmatch.scoring.constraints import hard_failures
 from componentmatch.scoring.engine import ranking_key, score_candidate
 from componentmatch.scoring.weights import RULE_VERSION, weights_for
+from componentmatch_contracts.requirement import ProcurementRequirement
+from componentmatch_contracts.result import (
+    ExclusionSummary,
+    MatchError,
+    MatchMetadata,
+    MatchResult,
+    RejectedOffer,
+)
 
 
 @dataclass(frozen=True)

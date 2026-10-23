@@ -2,7 +2,6 @@
 
 from typing import Annotated
 
-from componentmatch_contracts.agent import AgentRequest, AgentResult
 from fastapi import APIRouter, Depends, Request
 from fastapi.responses import JSONResponse
 
@@ -11,6 +10,7 @@ from componentmatch.api.routes import get_matching_service
 from componentmatch.core.config import Settings
 from componentmatch.llm.client import DeepSeekTransport, JSONModel
 from componentmatch.services.matching import MatchingService
+from componentmatch_contracts.agent import AgentRequest, AgentResult
 
 router = APIRouter(prefix="/api/v1/agent", tags=["single agent"])
 

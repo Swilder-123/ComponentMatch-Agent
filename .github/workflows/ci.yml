@@ -47,10 +47,10 @@ jobs:
         run: uv sync --locked --python 3.11
 
       - name: Lint Python
-        run: uv run --no-sync ruff check backend frontend packages scripts tests
+        run: uv run --no-sync ruff check --no-cache backend frontend packages scripts tests
 
       - name: Check Python formatting
-        run: uv run --no-sync ruff format --check backend frontend packages scripts tests
+        run: uv run --no-sync ruff format --no-cache --check backend frontend packages scripts tests
 
       - name: Check documentation and local links
         run: uv run --no-sync python scripts/check_docs.py

@@ -3,6 +3,7 @@
 from datetime import datetime
 from typing import TypedDict
 
+from componentmatch.services.matching import FilteredMatch, PreparedMatch
 from componentmatch_contracts.agent import (
     AgentRequest,
     AgentResult,
@@ -16,8 +17,6 @@ from componentmatch_contracts.agent import (
 )
 from componentmatch_contracts.requirement import ProcurementRequirement
 from componentmatch_contracts.result import MatchError, MatchResult
-
-from componentmatch.services.matching import FilteredMatch, PreparedMatch
 
 
 class MatchState(TypedDict, total=False):

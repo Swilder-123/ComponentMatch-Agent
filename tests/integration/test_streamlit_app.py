@@ -3,10 +3,10 @@ from pathlib import Path
 
 import httpx
 import pytest
-from componentmatch_frontend.api_client import APIClient
-from componentmatch_frontend.presentation import PRESETS
 from streamlit.testing.v1 import AppTest
 
+from componentmatch_frontend.api_client import APIClient
+from componentmatch_frontend.presentation import PRESETS
 from tests.phase4_fakes import response_for
 
 

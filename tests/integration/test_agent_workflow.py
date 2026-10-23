@@ -3,15 +3,15 @@ import copy
 import logging
 
 import pytest
+from fastapi.testclient import TestClient
+from sqlalchemy import event
+
 from componentmatch.agent.graph import AgentWorkflow
 from componentmatch.api.agent_routes import get_agent_workflow
 from componentmatch.api.main import app
 from componentmatch.core.config import Settings
 from componentmatch.llm.client import JSONModel, LLMFailure
 from componentmatch_contracts.agent import AgentRequest, AgentResult
-from fastapi.testclient import TestClient
-from sqlalchemy import event
-
 from tests.agent_fakes import DRAFT, TEXT, FakeTransport, valid_plan
 
 

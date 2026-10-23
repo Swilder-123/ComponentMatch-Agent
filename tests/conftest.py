@@ -5,6 +5,7 @@ from datetime import UTC, datetime
 
 import httpx
 import pytest
+
 from componentmatch.core.clock import FixedClock
 from componentmatch.db.repositories import candidates, find_components
 from componentmatch.db.seed import seed_demo

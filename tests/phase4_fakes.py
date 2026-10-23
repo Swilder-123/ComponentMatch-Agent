@@ -8,7 +8,6 @@ from componentmatch.core.config import Settings
 from componentmatch.llm.client import JSONModel, LLMFailure
 from componentmatch_contracts.agent import AgentRequest
 from componentmatch_frontend.presentation import PRESETS
-
 from tests.agent_fakes import DRAFT, FakeTransport
 
 

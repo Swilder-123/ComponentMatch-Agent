@@ -6,6 +6,7 @@ from decimal import Decimal
 from pathlib import Path
 
 import pytest
+
 from componentmatch_frontend.presentation import (
     CODES,
     FIELDS,
@@ -18,7 +19,6 @@ from componentmatch_frontend.presentation import (
     raw_metric,
     score_chart,
 )
-
 from tests.phase4_fakes import response_for
 
 

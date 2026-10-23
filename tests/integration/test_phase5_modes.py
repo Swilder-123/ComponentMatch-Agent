@@ -3,11 +3,12 @@
 from unittest.mock import Mock
 
 import pytest
+from fastapi.testclient import TestClient
+
 from componentmatch.api.main import app as api
 from componentmatch.api.routes import get_matching_service
 from componentmatch.llm.client import DeepSeekTransport, JSONModel
 from componentmatch_contracts.result import MatchResult
-from fastapi.testclient import TestClient
 
 
 @pytest.mark.parametrize("profile", ["balanced", "cost", "quality"])

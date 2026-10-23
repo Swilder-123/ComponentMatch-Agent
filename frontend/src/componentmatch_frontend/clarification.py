@@ -1,8 +1,8 @@
 """Explicit field confirmation controls; values are validated before HTTP submission."""
 
 import streamlit as st
-from componentmatch_contracts.agent import AgentRequest
 
+from componentmatch_contracts.agent import AgentRequest
 from componentmatch_frontend.presentation import VALUES, field_label
 
 

@@ -2,6 +2,9 @@ from datetime import UTC, datetime, timedelta
 from decimal import Decimal
 
 import pytest
+from sqlalchemy import delete
+from sqlalchemy.orm import Session
+
 from componentmatch.core.clock import FixedClock
 from componentmatch.models import (
     Component,
@@ -12,8 +15,6 @@ from componentmatch.models import (
 )
 from componentmatch.services.matching import MatchingService
 from componentmatch_contracts.result import MatchResult
-from sqlalchemy import delete
-from sqlalchemy.orm import Session
 
 
 def supplier_ids(result):

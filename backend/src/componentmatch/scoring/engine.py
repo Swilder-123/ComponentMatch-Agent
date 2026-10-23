@@ -3,13 +3,12 @@
 from datetime import date, datetime, timedelta
 from decimal import ROUND_HALF_UP, Decimal, localcontext
 
-from componentmatch_contracts.requirement import ProcurementRequirement
-from componentmatch_contracts.result import DimensionScore, Evidence, Recommendation, Risk
-
 from componentmatch.core.clock import business_date, month_offset
 from componentmatch.schemas.snapshot import Candidate, PerformanceData, Record
 from componentmatch.scoring.constraints import hard_failures, valid_certifications
 from componentmatch.scoring.weights import METRICS, validate_weights
+from componentmatch_contracts.requirement import ProcurementRequirement
+from componentmatch_contracts.result import DimensionScore, Evidence, Recommendation, Risk
 
 SIX_PLACES = Decimal("0.000001")
 

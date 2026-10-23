@@ -5,12 +5,12 @@ import copy
 import json
 
 import pytest
+
 from componentmatch.agent.graph import AgentWorkflow
 from componentmatch.core.config import Settings
 from componentmatch.llm.client import DeepSeekTransport, JSONModel, LLMFailure, LLMReply
 from componentmatch.services.matching import MatchingService
 from componentmatch_contracts.agent import AgentRequest
-
 from scripts import check_deepseek as script
 from tests.agent_fakes import DRAFT, FakeTransport
 

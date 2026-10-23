@@ -2,12 +2,11 @@
 
 from datetime import datetime, timedelta
 
-from componentmatch_contracts.requirement import ProcurementRequirement
-from componentmatch_contracts.result import ExclusionReason
-
 from componentmatch.core.clock import business_date
 from componentmatch.core.identity import manufacturer_key, part_key
 from componentmatch.schemas.snapshot import Candidate, CertificationData
+from componentmatch_contracts.requirement import ProcurementRequirement
+from componentmatch_contracts.result import ExclusionReason
 
 
 def valid_certifications(

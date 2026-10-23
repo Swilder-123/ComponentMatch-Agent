@@ -11,6 +11,8 @@ from pathlib import Path
 from uuid import UUID
 
 import httpx
+from sqlalchemy.engine import make_url
+
 from componentmatch.agent.graph import AgentWorkflow
 from componentmatch.core.config import Settings
 from componentmatch.db.session import make_engine
@@ -18,7 +20,6 @@ from componentmatch.llm.client import DeepSeekTransport, JSONModel, LLMFailure
 from componentmatch.services.matching import MatchingService
 from componentmatch_contracts.agent import AgentRequest, AgentResult
 from componentmatch_contracts.requirement import ProcurementRequirement
-from sqlalchemy.engine import make_url
 
 NORMAL_TEXT = (
     "采购TI的LM358DR，1000片，7天内到货，单价不超过1.2元，"

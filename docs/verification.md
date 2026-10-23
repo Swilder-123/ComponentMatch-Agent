@@ -21,6 +21,14 @@ CI 不使用仓库模型密钥，不运行真实模型联调、手动浏览器�
 
 配置方法参考 [uv 官方 GitHub Actions 指南](https://docs.astral.sh/uv/guides/integration/github/)。
 
+## 首次远端 CI 的导入排序修复
+
+首次提交 `9326df5` 的 GitHub CI 在 Lint Python 步骤发现6处 `I001` 导入排序错误，后续步骤尚未执行。本地禁用 Ruff 缓存后复现相同6处错误；之前的缓存检查未暴露问题，不能用那次本地通过替代远端结果。
+
+修复在根 `pyproject.toml` 明确配置三个源码目录以及自有包、scripts 和 tests 的导入分类，随后统一整理导入顺序；CI 的 lint 和格式检查均增加 `--no-cache`。相关设置参考 [Ruff 官方说明](https://docs.astral.sh/ruff/settings/#src)。
+
+复验包括：修复后的6个 CI 运行步骤全部本地通过、403项测试通过，以及无旧环境和缓存的源码副本中的 Ruff 检查与格式检查通过。另以 AST 对比确认34个 Python 文件的导入名称与非导入代码未变化，仅调整导入分组/顺序。记录位于本地 `logs/ci-import-fix/`；修复后的远端 CI 仍需提交并推送后确认。
+
 ## 本地复验
 
 ```powershell
